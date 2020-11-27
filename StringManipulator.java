@@ -3,7 +3,7 @@ public class StringManipulator {
         String newstr = "";
         for (int i = 0; i < str1.length(); i++) {
             if (str1.charAt(i) == ' ') {
-                return null;
+                ;
             }
             else {
                 newstr = newstr + str1.charAt(i);
@@ -11,7 +11,7 @@ public class StringManipulator {
         }
         for (int i = 0; i < str2.length(); i++) {
             if (str2.charAt(i) == ' ') {
-                return null;
+                ;
             }
             else {
                 newstr = newstr + str2.charAt(i);
@@ -19,8 +19,13 @@ public class StringManipulator {
         }
         return newstr;
     }
-    public Integer getIndexOrNull(String str1, char chr1) {
-        
+    public Integer getIndexOrNull(String word, char letter) {
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == letter) {
+                return i;
+            }
+        }
+        return null;
     }
     public Integer getIndexOrNull(String str1, String str2) {
         
