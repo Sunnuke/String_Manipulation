@@ -28,19 +28,13 @@ public class StringManipulator {
         return null;
     }
     public Integer getIndexOrNull(String str1, String str2) {
-        int dex[] = new int[str2.length()];
-        for (int i = 0; i < str1.length(); i++) {
-            for (int j = 0; j < str2.length(); j++) {
-                if (str1.charAt(i) == str2.charAt(j)) {
-                    dex[j] = i;
-                    break;
-                }
-                else {
-                    break;
-                }
-            }
+        int sub = str1.indexOf(str2);
+        if (sub == -1) {
+            return null;
         }
-        return dex[0];
+        else{
+            return sub;
+        }
     }
     public String concatSubstring(String str1, int num1, int num2, String str2) {
         
