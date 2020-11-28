@@ -37,6 +37,10 @@ public class StringManipulator {
         }
     }
     public String concatSubstring(String str1, int num1, int num2, String str2) {
-        
+        String sub = "";
+        for (int i = num1; i < num2; i++) {
+            sub = sub + Character.toString(str1.charAt(i));
+        }
+        return sub + str2;
     }
 }
